@@ -27,3 +27,18 @@ const overallProgressElement =
 
 overallProgressElement.textContent =
     "Overall GKS Progress: " + totalProgress + "%";
+    // ================================
+// UPDATE PROGRESS BARS
+// ================================
+
+document.getElementById("programming-bar").style.width =
+    progressData.programming + "%";
+
+document.getElementById("korean-bar").style.width =
+    progressData.korean + "%";
+
+document.getElementById("architecture-bar").style.width =
+    progressData.architecture + "%";
+
+document.getElementById("portfolio-bar").style.width =
+    progressData.portfolio + "%";
