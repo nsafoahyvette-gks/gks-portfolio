@@ -27,6 +27,7 @@ const overallProgressElement =
 
 overallProgressElement.textContent =
     "Overall GKS Progress: " + totalProgress + "%";
+    
     // ================================
 // UPDATE PROGRESS BARS
 // ================================
