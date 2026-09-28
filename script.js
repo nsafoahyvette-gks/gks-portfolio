@@ -2,6 +2,7 @@
 // Interactive features will be built here.
 
 console.log("GKS Portfolio loaded!");
+
 // ================================
 // GKS PROGRESS DATA
 // ================================
@@ -20,6 +21,7 @@ const totalProgress =
      progressData.portfolio) / 4;
 
 console.log("Overall GKS Progress:", totalProgress + "%");
+
 const overallProgressElement =
     document.getElementById("overall-progress");
 
