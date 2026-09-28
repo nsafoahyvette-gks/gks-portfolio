@@ -2,7 +2,6 @@
 // Interactive features will be built here.
 
 console.log("GKS Portfolio loaded!");
-
 // ================================
 // GKS PROGRESS DATA
 // ================================
