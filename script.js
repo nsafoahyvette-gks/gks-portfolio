@@ -21,3 +21,8 @@ const totalProgress =
      progressData.portfolio) / 4;
 
 console.log("Overall GKS Progress:", totalProgress + "%");
+const overallProgressElement =
+    document.getElementById("overall-progress");
+
+overallProgressElement.textContent =
+    "Overall GKS Progress: " + totalProgress + "%";
