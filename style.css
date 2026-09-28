@@ -96,8 +96,8 @@ footer {
 }
 
 .progress-fill {
-    width: 0;
     height: 100%;
+    width: var(--progress, 0%);
     background: linear-gradient(90deg, #9b8acb, #6f8fd8);
     border-radius: 20px;
     transition: width 1s ease;
