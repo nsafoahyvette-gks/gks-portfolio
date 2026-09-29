@@ -49,6 +49,17 @@ document.getElementById("portfolio-bar").style.setProperty(
     "--progress",
     progressData.portfolio + "%"
 );
+document.getElementById("programming-percent").textContent =
+    progressData.programming + "%";
+
+document.getElementById("korean-percent").textContent =
+    progressData.korean + "%";
+
+document.getElementById("architecture-percent").textContent =
+    progressData.architecture + "%";
+
+document.getElementById("portfolio-percent").textContent =
+    progressData.portfolio + "%";
 const updateProgressButton =
     document.getElementById("update-progress");
     const progressEditor =
