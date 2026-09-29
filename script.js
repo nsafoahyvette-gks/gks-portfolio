@@ -56,3 +56,4 @@ const updateProgressButton =
 updateProgressButton.addEventListener("click", function () {
     alert("Progress system is ready! 🚀");
 });
+console.log("NEW VERSION LOADED 🚀");
