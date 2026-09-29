@@ -1,4 +1,3 @@
-alert("NEW JAVASCRIPT IS LOADING 🚀");
 // Yvette's GKS Portfolio
 // Interactive features will be built here.
 
@@ -28,7 +27,6 @@ const overallProgressElement =
 
 overallProgressElement.textContent =
     "Overall GKS Progress: " + totalProgress + "%";
-    
     // ================================
 // UPDATE PROGRESS BARS
 // ================================
