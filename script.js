@@ -1,4 +1,3 @@
-
 // Yvette's GKS Portfolio
 // Interactive features will be built here.
 
