@@ -1,5 +1,4 @@
 alert("NEW JAVASCRIPT IS LOADING 🚀");
-
 // Yvette's GKS Portfolio
 // Interactive features will be built here.
 
