@@ -60,7 +60,8 @@ updateProgressButton.addEventListener("click", function () {
     } else {
         progressEditor.style.display = "none";
     }
-});
+}); 
+
 // ================================
 // APPLY NEW PROGRESS
 // ================================
