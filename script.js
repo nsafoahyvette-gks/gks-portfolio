@@ -51,3 +51,13 @@ document.getElementById("portfolio-bar").style.setProperty(
 );
 const updateProgressButton =
     document.getElementById("update-progress");
+    const progressEditor =
+    document.getElementById("progress-editor");
+
+updateProgressButton.addEventListener("click", function () {
+    if (progressEditor.style.display === "none") {
+        progressEditor.style.display = "block";
+    } else {
+        progressEditor.style.display = "none";
+    }
+});
