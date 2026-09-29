@@ -31,15 +31,22 @@ overallProgressElement.textContent =
     // ================================
 // UPDATE PROGRESS BARS
 // ================================
+document.getElementById("programming-bar").style.setProperty(
+    "--progress",
+    progressData.programming + "%"
+);
 
-document.getElementById("programming-bar").style.width =
-    progressData.programming + "%";
+document.getElementById("korean-bar").style.setProperty(
+    "--progress",
+    progressData.korean + "%"
+);
 
-document.getElementById("korean-bar").style.width =
-    progressData.korean + "%";
+document.getElementById("architecture-bar").style.setProperty(
+    "--progress",
+    progressData.architecture + "%"
+);
 
-document.getElementById("architecture-bar").style.width =
-    progressData.architecture + "%";
-
-document.getElementById("portfolio-bar").style.width =
-    progressData.portfolio + "%";
+document.getElementById("portfolio-bar").style.setProperty(
+    "--progress",
+    progressData.portfolio + "%"
+);
