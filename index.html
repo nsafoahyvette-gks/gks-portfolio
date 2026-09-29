@@ -2,154 +2,1480 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yvette | GKS Journey</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Yvette Mensah Nsafoah | GKS Portfolio
+    </title>
+
+    <meta
+        name="description"
+        content="Yvette Mensah Nsafoah's academic, technical, creative and GKS journey portfolio."
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
+
 <body>
 
-    <header>
-        <h1>Yvette Mensah Nsafoah</h1>
-        <p>My Journey to Korea 🇰🇷</p>
-    </header>
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-    <main>
+<nav class="navbar">
 
-        <section>
-            <h2>About Me</h2>
+    <a href="#home" class="logo">
+        YVETTE<span>.</span>
+    </a>
+
+    <button
+        id="menu-button"
+        class="menu-button"
+        aria-label="Open navigation"
+    >
+        ☰
+    </button>
+
+    <div
+        id="nav-links"
+        class="nav-links"
+    >
+
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#projects">Projects</a>
+        <a href="#korean">Korean</a>
+        <a href="#academics">Academics</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#goals">Goals</a>
+
+        <button
+            id="theme-button"
+            class="theme-button"
+            aria-label="Toggle dark mode"
+        >
+            🌙
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            GHANA • GKS JOURNEY • 2026
+        </p>
+
+        <h1>
+            Yvette<br>
+            Mensah Nsafoah
+        </h1>
+
+        <p class="hero-subtitle">
+            Student • Future Technologist •
+            Aspiring Architect • Korean Learner
+        </p>
+
+        <p class="hero-text">
+            I am building my skills one project at a time —
+            exploring programming, technology, architecture,
+            design, academics and Korean language while
+            preparing for my future study journey.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#dashboard"
+                class="primary-button"
+            >
+                Explore My Journey
+            </a>
+
+            <a
+                href="#projects"
+                class="secondary-button"
+            >
+                See My Work
+            </a>
+
+        </div>
+
+        <div class="hero-mini-stats">
+
+            <div>
+                <strong id="hero-progress">
+                    12.5%
+                </strong>
+                <span>Progress</span>
+            </div>
+
+            <div>
+                <strong id="hero-projects">
+                    0
+                </strong>
+                <span>Projects</span>
+            </div>
+
+            <div>
+                <strong>
+                    2026
+                </strong>
+                <span>Journey</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" class="section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            ABOUT ME
+        </p>
+
+        <h2>
+            Building more than a résumé.
+        </h2>
+
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-main">
+
             <p>
-                I am a Ghanaian student passionate about technology,
-                creativity, architecture, and learning.
-                This website documents my journey toward my goal of
-                studying in Korea.
+                I believe that preparation should be visible.
+                Instead of only saying what I want to learn,
+                I want to show what I am actually building,
+                studying and improving.
             </p>
-        </section>
 
-        <section>
-            <h2>My GKS Journey 🇰🇷</h2>
             <p>
-                This is where I will document my preparation,
-                progress, projects, Korean learning, and growth.
+                This portfolio documents my growth across
+                programming, web development, architecture,
+                graphic design, Korean language and academics.
             </p>
-        </section>
 
-        <section>
-            <h2>My Projects 💻</h2>
-            <p>My projects will appear here as I build them.</p>
-        </section>
+            <p>
+                My goal is to turn curiosity into real skills,
+                and real skills into meaningful projects.
+            </p>
 
-        <section>
-            <h2>Architecture 🏛️</h2>
-            <p>My architecture and technical design work.</p>
-        </section>
-<section id="progress">
-    <h2>My GKS Progress 📊</h2>
-    
-    <p id="overall-progress">
-    Overall GKS Progress: Calculating...
-</p>
-<button id="update-progress">
-    Update My Progress 🚀
-</button>
-<div id="progress-editor" style="display: none;">
-
-    <h3>Update Your Progress</h3>
-
-    <label>
-        Programming:
-        <input type="number" id="programming-input" min="0" max="100" value="10">
-    </label>
-
-    <br><br>
-
-    <label>
-        Korean:
-        <input type="number" id="korean-input" min="0" max="100" value="15">
-    </label>
-
-    <br><br>
-
-    <label>
-        Architecture:
-        <input type="number" id="architecture-input" min="0" max="100" value="5">
-    </label>
-
-    <br><br>
-
-    <label>
-        Portfolio:
-        <input type="number" id="portfolio-input" min="0" max="100" value="20">
-    </label>
-<button id="apply-progress">
-    Apply Progress ✨
-</button>
-
-</div>
-    <div class="progress-item">
-        <div class="progress-label">
-            <span>Programming 💻</span>
-            <span id="programming-percent">10%</span>
         </div>
-        <div class="progress-bar">
-            <div id="programming-bar" class="progress-fill"></div>
+
+        <div class="about-card">
+
+            <span class="big-symbol">
+                ✦
+            </span>
+
+            <h3>
+                My Philosophy
+            </h3>
+
+            <p>
+                Learn it.<br>
+                Build it.<br>
+                Document it.<br>
+                Improve it.
+            </p>
+
         </div>
+
     </div>
 
-    <div class="progress-item">
-        <div class="progress-label">
-            <span>Korean 🇰🇷</span>
-            <span id="programming-percent">10%</span>
-        </div>
-        <div class="progress-bar">
-            <div id="korean-bar" class="progress-fill"></div>
-        </div>
-    </div>
-
-    <div class="progress-item">
-        <div class="progress-label">
-            <span>Architecture 🏛️</span>
-            <span id="architecture-percent">5%</span>
-        </div>
-        <div class="progress-bar">
-            <div id="architecture-bar" class="progress-fill"></div>
-        </div>
-    </div>
-
-    <div class="progress-item">
-        <div class="progress-label">
-            <span>Portfolio 🎨</span>
-            <span id="portfolio-percent">20%</span>
-        </div>
-        <div class="progress-bar">
-            <div id="portfolio-bar" class="progress-fill"></div>
-        </div>
-    </div>
 </section>
-        <section>
-            <h2>Korean Journey 🇰🇷</h2>
-            <p>My progress learning the Korean language and culture.</p>
-        </section>
 
-        <section>
-            <h2>Achievements 🏆</h2>
-            <p>Certificates, competitions, awards, and milestones.</p>
-        </section>
 
-        <section>
-            <h2>Future Goals 🎯</h2>
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<section id="dashboard" class="section dashboard-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            COMMAND CENTER
+        </p>
+
+        <h2>
+            My GKS Dashboard
+        </h2>
+
+        <p>
+            A live overview of the work I am doing
+            toward my long-term goals.
+        </p>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="dashboard-stats">
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                🎯
+            </span>
+
+            <strong id="dashboard-progress">
+                12.5%
+            </strong>
+
+            <span>
+                Overall Progress
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                💻
+            </span>
+
+            <strong id="dashboard-projects">
+                0
+            </strong>
+
+            <span>
+                Projects
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                🇰🇷
+            </span>
+
+            <strong id="dashboard-korean">
+                Beginner
+            </strong>
+
+            <span>
+                Korean Level
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                🏆
+            </span>
+
+            <strong id="dashboard-achievements">
+                0
+            </strong>
+
+            <span>
+                Achievements
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROGRESS PANEL -->
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    PREPARATION
+                </p>
+
+                <h3>
+                    GKS Preparation Progress
+                </h3>
+
+            </div>
+
+            <button
+                id="update-progress"
+                class="small-button"
+            >
+                Edit
+            </button>
+
+        </div>
+
+
+        <div
+            id="progress-editor"
+            class="progress-editor"
+        >
+
+            <div class="editor-grid">
+
+                <label>
+                    Programming
+                    <input
+                        id="programming-input"
+                        type="number"
+                        min="0"
+                        max="100"
+                    >
+                </label>
+
+                <label>
+                    Korean
+                    <input
+                        id="korean-input"
+                        type="number"
+                        min="0"
+                        max="100"
+                    >
+                </label>
+
+                <label>
+                    Architecture
+                    <input
+                        id="architecture-input"
+                        type="number"
+                        min="0"
+                        max="100"
+                    >
+                </label>
+
+                <label>
+                    Portfolio
+                    <input
+                        id="portfolio-input"
+                        type="number"
+                        min="0"
+                        max="100"
+                    >
+                </label>
+
+            </div>
+
+            <button
+                id="apply-progress"
+                class="primary-button"
+            >
+                Save Progress
+            </button>
+
+        </div>
+
+
+        <div class="overall-progress">
+
+            <div class="progress-title">
+
+                <span>
+                    Overall
+                </span>
+
+                <strong id="overall-progress">
+                    12.5%
+                </strong>
+
+            </div>
+
+            <div class="progress-track large">
+                <div
+                    id="overall-bar"
+                    class="progress-fill"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="progress-list">
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+                    <span>Programming</span>
+
+                    <strong
+                        id="programming-percent"
+                    >
+                        10%
+                    </strong>
+                </div>
+
+                <div class="progress-track">
+                    <div
+                        id="programming-bar"
+                        class="progress-fill"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+                    <span>Korean</span>
+
+                    <strong
+                        id="korean-percent"
+                    >
+                        15%
+                    </strong>
+                </div>
+
+                <div class="progress-track">
+                    <div
+                        id="korean-bar"
+                        class="progress-fill"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+                    <span>Architecture</span>
+
+                    <strong
+                        id="architecture-percent"
+                    >
+                        5%
+                    </strong>
+                </div>
+
+                <div class="progress-track">
+                    <div
+                        id="architecture-bar"
+                        class="progress-fill"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+                    <span>Portfolio</span>
+
+                    <strong
+                        id="portfolio-percent"
+                    >
+                        20%
+                    </strong>
+                </div>
+
+                <div class="progress-track">
+                    <div
+                        id="portfolio-bar"
+                        class="progress-fill"
+                    ></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <div class="quick-actions">
+
+        <a href="#projects">
+            <span>💻</span>
+            <strong>Projects</strong>
+            <small>View my work</small>
+        </a>
+
+        <a href="#korean">
+            <span>🇰🇷</span>
+            <strong>Korean</strong>
+            <small>Language journey</small>
+        </a>
+
+        <a href="#academics">
+            <span>📚</span>
+            <strong>Academics</strong>
+            <small>School growth</small>
+        </a>
+
+        <a href="#goals">
+            <span>🎯</span>
+            <strong>Goals</strong>
+            <small>Track targets</small>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects" class="section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            PORTFOLIO
+        </p>
+
+        <h2>
+            Projects
+        </h2>
+
+        <p>
+            Projects that turn what I learn into
+            something tangible.
+        </p>
+
+    </div>
+
+
+    <div class="project-controls">
+
+        <input
+            id="project-search"
+            type="search"
+            placeholder="Search projects..."
+        >
+
+        <select id="project-filter">
+
+            <option value="all">
+                All Categories
+            </option>
+
+            <option value="programming">
+                Programming
+            </option>
+
+            <option value="web">
+                Web Development
+            </option>
+
+            <option value="architecture">
+                Architecture
+            </option>
+
+            <option value="design">
+                Graphic Design
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div
+        id="project-grid"
+        class="project-grid"
+    >
+
+        <!-- PROJECT 1 -->
+
+        <article
+            class="project-card"
+            data-category="programming"
+            data-title="Python Calculator"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    01
+                </span>
+
+                <span class="tag">
+                    Python
+                </span>
+
+            </div>
+
+            <h3>
+                Python Calculator
+            </h3>
+
             <p>
-                My academic, career, technology, architecture,
-                and personal goals.
+                A beginner programming project
+                demonstrating variables, input,
+                calculations and functions.
             </p>
-        </section>
 
-    </main>
+            <div class="project-bottom">
 
-    <footer>
-        <p>© 2026 Yvette Mensah Nsafoah</p>
-    </footer>
-    
-<script src="script.js?v=10"></script>
+                <span class="status">
+                    Planned
+                </span>
 
-</body>
-</html>
+                <button
+                    class="view-project"
+                    data-project="calculator"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article
+            class="project-card"
+            data-category="programming"
+            data-title="Grade Calculator"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    02
+                </span>
+
+                <span class="tag">
+                    Python
+                </span>
+
+            </div>
+
+            <h3>
+                Grade Calculator
+            </h3>
+
+            <p>
+                A student tool for calculating
+                grades and understanding score
+                categories.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="grades"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article
+            class="project-card"
+            data-category="programming"
+            data-title="Quiz Application"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    03
+                </span>
+
+                <span class="tag">
+                    Python
+                </span>
+
+            </div>
+
+            <h3>
+                Quiz Application
+            </h3>
+
+            <p>
+                An interactive quiz project designed
+                to practice logic, conditions and
+                user input.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="quiz"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 4 -->
+
+        <article
+            class="project-card"
+            data-category="programming"
+            data-title="Student Information System"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    04
+                </span>
+
+                <span class="tag">
+                    Python
+                </span>
+
+            </div>
+
+            <h3>
+                Student Information System
+            </h3>
+
+            <p>
+                A structured program for storing and
+                managing basic student information.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="student-system"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 5 -->
+
+        <article
+            class="project-card"
+            data-category="programming"
+            data-title="Study Timer"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    05
+                </span>
+
+                <span class="tag">
+                    Programming
+                </span>
+
+            </div>
+
+            <h3>
+                Study Timer
+            </h3>
+
+            <p>
+                A productivity tool for focused study
+                sessions and structured breaks.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="study-timer"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 6 -->
+
+        <article
+            class="project-card"
+            data-category="web"
+            data-title="GKS Journey Website"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    06
+                </span>
+
+                <span class="tag">
+                    HTML • CSS • JS
+                </span>
+
+            </div>
+
+            <h3>
+                GKS Journey Website
+            </h3>
+
+            <p>
+                An interactive portfolio documenting
+                my academic, technical and personal
+                growth.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status complete">
+                    Active
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="portfolio"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 7 -->
+
+        <article
+            class="project-card"
+            data-category="web"
+            data-title="Study Tracker"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    07
+                </span>
+
+                <span class="tag">
+                    Web
+                </span>
+
+            </div>
+
+            <h3>
+                Study Tracker
+            </h3>
+
+            <p>
+                A future web application for tracking
+                subjects, study sessions and progress.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="study-tracker"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 8 -->
+
+        <article
+            class="project-card"
+            data-category="architecture"
+            data-title="Future Dream House"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    08
+                </span>
+
+                <span class="tag">
+                    Architecture
+                </span>
+
+            </div>
+
+            <h3>
+                Future Dream House
+            </h3>
+
+            <p>
+                A residential concept exploring
+                space, function and personal lifestyle.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="dream-house"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 9 -->
+
+        <article
+            class="project-card"
+            data-category="architecture"
+            data-title="Sustainable School"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    09
+                </span>
+
+                <span class="tag">
+                    Architecture
+                </span>
+
+            </div>
+
+            <h3>
+                Sustainable School
+            </h3>
+
+            <p>
+                A school concept exploring natural
+                lighting, ventilation and sustainability.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="school"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 10 -->
+
+        <article
+            class="project-card"
+            data-category="architecture"
+            data-title="Korean Inspired Community"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    10
+                </span>
+
+                <span class="tag">
+                    Architecture
+                </span>
+
+            </div>
+
+            <h3>
+                Korean-Inspired Community
+            </h3>
+
+            <p>
+                A conceptual project exploring how
+                Korean architectural ideas could
+                influence a modern community.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="korean-architecture"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 11 -->
+
+        <article
+            class="project-card"
+            data-category="design"
+            data-title="Personal Brand Identity"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    11
+                </span>
+
+                <span class="tag">
+                    Design
+                </span>
+
+            </div>
+
+            <h3>
+                Personal Brand Identity
+            </h3>
+
+            <p>
+                A visual identity project exploring
+                typography, logo design and presentation.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="brand"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 12 -->
+
+        <article
+            class="project-card"
+            data-category="design"
+            data-title="Architecture Presentation Board"
+        >
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    12
+                </span>
+
+                <span class="tag">
+                    Design
+                </span>
+
+            </div>
+
+            <h3>
+                Architecture Presentation Board
+            </h3>
+
+            <p>
+                A graphic presentation combining
+                architectural drawings, typography
+                and visual storytelling.
+            </p>
+
+            <div class="project-bottom">
+
+                <span class="status">
+                    Planned
+                </span>
+
+                <button
+                    class="view-project"
+                    data-project="presentation"
+                >
+                    View →
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <p
+        id="no-projects"
+        class="no-results"
+    >
+        No projects found.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     KOREAN
+===================================================== -->
+
+<section
+    id="korean"
+    class="section soft-section"
+>
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            🇰🇷 LANGUAGE
+        </p>
+
+        <h2>
+            My Korean Journey
+        </h2>
+
+        <p>
+            Starting from Hangul and building toward
+            real Korean communication.
+        </p>
+
+    </div>
+
+
+    <div class="korean-overview">
+
+        <div class="korean-level-card">
+
+            <span>
+                CURRENT LEVEL
+            </span>
+
+            <strong>
+                Beginner
+            </strong>
+
+            <p>
+                Building the foundations.
+            </p>
+
+        </div>
+
+
+        <div class="korean-level-card">
+
+            <span>
+                CURRENT FOCUS
+            </span>
+
+            <strong>
+                Hangul
+            </strong>
+
+            <p>
+                Reading and syllable formation.
+            </p>
+
+        </div>
+
+
+        <div class="korean-level-card">
+
+            <span>
+                LONG-TERM GOAL
+            </span>
+
+            <strong>
+                TOPIK
+            </strong>
+
+            <p>
+                Future Korean proficiency goal.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="korean-grid">
+
+        <div class="language-card active">
+
+            <span>
+                01
+            </span>
+
+            <h3>
+                Hangul
+            </h3>
+
+            <p>
+                Korean vowels, consonants,
+                syllable blocks and reading.
+            </p>
+
+            <strong>
+                ACTIVE
+            </strong>
+
+        </div>
+
+
+        <div class="language-card">
+
+            <span>
+                02
+            </span>
+
+            <h3>
+                Vocabulary
+            </h3>
+
+            <p>
+                Everyday words, expressions
+                and useful phrases.
+            </p>
+
+            <strong>
+                BUILDING
+            </strong>
+
+        </div>
+
+
+        <div class="language-card">
+
+            <span>
+                03
+            </span>
+
+            <h3>
+                Grammar
+            </h3>
+
+            <p>
+                Sentence structure, particles
+                and basic grammar.
+            </p>
+
+            <strong>
+                FUTURE
+            </strong>
+
+        </div>
+
+
+        <div class="language-card">
+
+            <span>
+                04
+            </span>
+
+            <h3>
+                TOPIK
+            </h3>
+
+            <p>
+                A future measurable milestone
+                for Korean language ability.
+            </p>
+
+            <strong>
+                LONG-TERM
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="study-log">
+
+        <div class="panel-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    STUDY LOG
+                </p>
+
+                <h3>
+                    Korean Study Notes
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="study-log-form">
+
+            <input
+                id="korean-topic"
+                type="text"
+                placeholder="What did you study?"
+            >
+
+            <input
+                id="korean-hours"
+                type="number"
+                min="0"
+                step="0.5"
+                placeholder="Hours"
+            >
+
+            <button
+                id="add-korean-log"
+                class="primary-button"
+            >
+                Add
+            </button>
+
+        </div>
+
+
+        <div
+            id="korean-log-list"
+            class="log-list"
+        >
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ACADEMICS
+===================================================== -->
+
+<section
+    id="academics"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            SCHOOL
+        </p>
+
+        <h2>
+            Academic Growth
+        </h2>
+
+        <p>
+            The subjects I am studying and developing
+            through consistent practice.
+        </p>
+
+    </div>
+
+
+    <div class="subjects-grid">
+
+        <div class="subject-card">
+            <span>EN</span>
+            <h3>English</h3>
+            <p>Communication and writing.</p>
+        </div>
+
+        <div class="subject-card">
+            <span>M</span>
+            <h3>Core Mathematics</h3>
+            <p>Problem solving and mathematical reasoning.</p>
+        </div>
+
+        <div class="subject-card">
+            <span>AM</span>
+            <h3>Additional Mathematics</h3>
+            <p>Advanced mathematical concepts.</p>
+        </div>
+
+        <div class="subject-card">
+            <span>P</span>
+            <h3>Physics</h3>
+            <p>Scientific reasoning and problem solving.</p>
+        </div>
+
+        <div class="subject-card">
+            <span>C</span>
+            <h3>Chemistry</h3>
+            <p>Scientific understanding and experimentation.</p>
+        </div>
+
+        <div
