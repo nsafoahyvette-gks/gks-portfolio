@@ -61,3 +61,50 @@ updateProgressButton.addEventListener("click", function () {
         progressEditor.style.display = "none";
     }
 });
+// ================================
+// APPLY NEW PROGRESS
+// ================================
+
+document.getElementById("apply-progress").addEventListener("click", function () {
+
+    progressData.programming =
+        Number(document.getElementById("programming-input").value);
+
+    progressData.korean =
+        Number(document.getElementById("korean-input").value);
+
+    progressData.architecture =
+        Number(document.getElementById("architecture-input").value);
+
+    progressData.portfolio =
+        Number(document.getElementById("portfolio-input").value);
+
+    const newTotal =
+        (progressData.programming +
+         progressData.korean +
+         progressData.architecture +
+         progressData.portfolio) / 4;
+
+    document.getElementById("overall-progress").textContent =
+        "Overall GKS Progress: " + newTotal + "%";
+
+    document.getElementById("programming-bar").style.setProperty(
+        "--progress",
+        progressData.programming + "%"
+    );
+
+    document.getElementById("korean-bar").style.setProperty(
+        "--progress",
+        progressData.korean + "%"
+    );
+
+    document.getElementById("architecture-bar").style.setProperty(
+        "--progress",
+        progressData.architecture + "%"
+    );
+
+    document.getElementById("portfolio-bar").style.setProperty(
+        "--progress",
+        progressData.portfolio + "%"
+    );
+});
