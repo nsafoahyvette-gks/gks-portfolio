@@ -50,3 +50,9 @@ document.getElementById("portfolio-bar").style.setProperty(
     "--progress",
     progressData.portfolio + "%"
 );
+const updateProgressButton =
+    document.getElementById("update-progress");
+
+updateProgressButton.addEventListener("click", function () {
+    alert("Progress system is ready! 🚀");
+});
