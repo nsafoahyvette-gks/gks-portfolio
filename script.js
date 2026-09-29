@@ -1,532 +1,431 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =================================
+   YVETTE GKS PORTFOLIO
+   INTERACTIVE SYSTEM
+================================= */
 
-    <title>Yvette | GKS Journey</title>
 
-    <meta
-        name="description"
-        content="Yvette Mensah Nsafoah's academic, technology, architecture and Korean learning journey."
-    >
+/* =================================
+   PROGRESS DATA
+================================= */
 
-    <link rel="stylesheet" href="style.css">
-</head>
+let progressData = {
 
-<body>
+    programming: 10,
 
-<!-- ================================
-     NAVIGATION
-================================ -->
+    korean: 15,
 
-<nav class="navbar">
+    architecture: 5,
 
-    <div class="nav-logo">
-        YVETTE<span>.</span>
-    </div>
+    portfolio: 20
 
-    <button id="menu-button" class="menu-button">
-        ☰
-    </button>
+};
 
-    <div id="nav-links" class="nav-links">
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#progress">Progress</a>
-        <a href="#projects">Projects</a>
-        <a href="#korean">Korean</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#goals">Goals</a>
+/* =================================
+   LOAD SAVED DATA
+================================= */
 
-        <button id="theme-button" class="theme-button">
-            🌙
-        </button>
+const savedProgress =
+    localStorage.getItem("yvetteProgress");
 
-    </div>
 
-</nav>
+if (savedProgress) {
 
+    try {
 
-<!-- ================================
-     HERO
-================================ -->
+        progressData =
+            JSON.parse(savedProgress);
 
-<header id="home" class="hero">
+    } catch (error) {
 
-    <div class="hero-content">
+        console.log(
+            "Could not load saved progress."
+        );
 
-        <p class="eyebrow">
-            MY GKS JOURNEY • 2026
-        </p>
+    }
 
-        <h1>
-            Yvette Mensah
-            <span>Nsafoah</span>
-        </h1>
+}
 
-        <p class="hero-description">
-            A Ghanaian student building her future through
-            technology, architecture, creativity and Korean.
-        </p>
 
-        <div class="hero-buttons">
+/* =================================
+   ELEMENTS
+================================= */
 
-            <a href="#progress" class="primary-button">
-                View My Progress
-            </a>
+const overallProgress =
+    document.getElementById(
+        "overall-progress"
+    );
 
-            <a href="#projects" class="secondary-button">
-                Explore My Work
-            </a>
 
-        </div>
+const programmingBar =
+    document.getElementById(
+        "programming-bar"
+    );
 
-    </div>
 
-    <div class="hero-decoration">
+const koreanBar =
+    document.getElementById(
+        "korean-bar"
+    );
 
-        <div class="floating-card card-one">
-            🇰🇷
-            <span>Korea</span>
-        </div>
 
-        <div class="floating-card card-two">
-            💻
-            <span>Technology</span>
-        </div>
+const architectureBar =
+    document.getElementById(
+        "architecture-bar"
+    );
 
-        <div class="floating-card card-three">
-            🏛️
-            <span>Architecture</span>
-        </div>
 
-    </div>
+const portfolioBar =
+    document.getElementById(
+        "portfolio-bar"
+    );
 
-</header>
 
+const programmingPercent =
+    document.getElementById(
+        "programming-percent"
+    );
 
-<main>
 
+const koreanPercent =
+    document.getElementById(
+        "korean-percent"
+    );
 
-<!-- ================================
-     ABOUT
-================================ -->
 
-<section id="about" class="section">
+const architecturePercent =
+    document.getElementById(
+        "architecture-percent"
+    );
 
-    <div class="section-heading">
 
-        <p class="section-label">01 • ABOUT ME</p>
+const portfolioPercent =
+    document.getElementById(
+        "portfolio-percent"
+    );
 
-        <h2>
-            Building a future
-            <span>one step at a time.</span>
-        </h2>
 
-    </div>
+/* =================================
+   UPDATE PROGRESS DISPLAY
+================================= */
 
-    <div class="about-grid">
+function updateProgressDisplay() {
 
-        <div class="about-card">
+    const totalProgress =
+        (
+            progressData.programming +
+            progressData.korean +
+            progressData.architecture +
+            progressData.portfolio
+        ) / 4;
 
-            <div class="big-icon">👩🏾‍💻</div>
 
-            <h3>Who I Am</h3>
+    overallProgress.textContent =
+        "Overall GKS Progress: " +
+        totalProgress.toFixed(1) +
+        "%";
 
-            <p>
-                I am a Ghanaian student passionate about
-                technology, creativity, architecture,
-                learning and personal growth.
-            </p>
 
-        </div>
+    programmingBar.style.width =
+        progressData.programming + "%";
 
 
-        <div class="about-card">
+    koreanBar.style.width =
+        progressData.korean + "%";
 
-            <div class="big-icon">🎯</div>
 
-            <h3>My Mission</h3>
+    architectureBar.style.width =
+        progressData.architecture + "%";
 
-            <p>
-                To develop the knowledge, skills and
-                portfolio needed to pursue my dream of
-                studying in Korea.
-            </p>
 
-        </div>
+    portfolioBar.style.width =
+        progressData.portfolio + "%";
 
 
-        <div class="about-card">
+    programmingPercent.textContent =
+        progressData.programming + "%";
 
-            <div class="big-icon">🚀</div>
 
-            <h3>My Vision</h3>
+    koreanPercent.textContent =
+        progressData.korean + "%";
 
-            <p>
-                To combine technology and design to create
-                useful things that can improve people's lives.
-            </p>
 
-        </div>
+    architecturePercent.textContent =
+        progressData.architecture + "%";
 
-    </div>
 
-</section>
+    portfolioPercent.textContent =
+        progressData.portfolio + "%";
 
+}
 
-<!-- ================================
-     PROGRESS
-================================ -->
 
-<section id="progress" class="section progress-section">
+/* =================================
+   UPDATE BUTTON
+================================= */
 
-    <div class="section-heading">
+const updateButton =
+    document.getElementById(
+        "update-progress"
+    );
 
-        <p class="section-label">02 • MY PROGRESS</p>
 
-        <h2>
-            The journey is
-            <span>already happening.</span>
-        </h2>
+const progressEditor =
+    document.getElementById(
+        "progress-editor"
+    );
 
-        <p>
-            Track my development across the skills and
-            experiences that matter to my goals.
-        </p>
 
-    </div>
+updateButton.addEventListener(
+    "click",
+    function () {
 
+        if (
+            progressEditor.style.display ===
+            "block"
+        ) {
 
-    <div class="overall-card">
+            progressEditor.style.display =
+                "none";
 
-        <div>
+        } else {
 
-            <p>OVERALL GKS PROGRESS</p>
+            progressEditor.style.display =
+                "block";
 
-            <h3 id="overall-progress">
-                12.5%
-            </h3>
+        }
 
-        </div>
+    }
+);
 
-        <div class="overall-circle">
-            🇰🇷
-        </div>
 
-    </div>
+/* =================================
+   APPLY PROGRESS
+================================= */
 
+const applyButton =
+    document.getElementById(
+        "apply-progress"
+    );
 
-    <button id="update-progress" class="primary-button">
-        Update My Progress 🚀
-    </button>
 
+applyButton.addEventListener(
+    "click",
+    function () {
 
-    <!-- EDITOR -->
 
-    <div id="progress-editor" class="progress-editor">
+        const programming =
+            Number(
+                document.getElementById(
+                    "programming-input"
+                ).value
+            );
 
-        <h3>Update Your Progress</h3>
 
-        <p>
-            Enter your current percentage for each area.
-        </p>
+        const korean =
+            Number(
+                document.getElementById(
+                    "korean-input"
+                ).value
+            );
 
 
-        <div class="input-grid">
+        const architecture =
+            Number(
+                document.getElementById(
+                    "architecture-input"
+                ).value
+            );
 
-            <label>
-                Programming
-                <input
-                    type="number"
-                    id="programming-input"
-                    min="0"
-                    max="100"
-                    value="10"
-                >
-            </label>
 
+        const portfolio =
+            Number(
+                document.getElementById(
+                    "portfolio-input"
+                ).value
+            );
 
-            <label>
-                Korean
-                <input
-                    type="number"
-                    id="korean-input"
-                    min="0"
-                    max="100"
-                    value="15"
-                >
-            </label>
 
+        progressData = {
 
-            <label>
-                Architecture
-                <input
-                    type="number"
-                    id="architecture-input"
-                    min="0"
-                    max="100"
-                    value="5"
-                >
-            </label>
+            programming:
+                Math.max(
+                    0,
+                    Math.min(100, programming)
+                ),
 
+            korean:
+                Math.max(
+                    0,
+                    Math.min(100, korean)
+                ),
 
-            <label>
-                Portfolio
-                <input
-                    type="number"
-                    id="portfolio-input"
-                    min="0"
-                    max="100"
-                    value="20"
-                >
-            </label>
+            architecture:
+                Math.max(
+                    0,
+                    Math.min(100, architecture)
+                ),
 
-        </div>
+            portfolio:
+                Math.max(
+                    0,
+                    Math.min(100, portfolio)
+                )
 
+        };
 
-        <button id="apply-progress" class="primary-button">
-            Apply Progress ✨
-        </button>
 
-    </div>
+        /* Save progress */
 
+        localStorage.setItem(
+            "yvetteProgress",
+            JSON.stringify(progressData)
+        );
 
-    <!-- PROGRESS BARS -->
 
-    <div class="progress-list">
+        /* Update screen */
 
+        updateProgressDisplay();
 
-        <div class="progress-item">
 
-            <div class="progress-label">
+        /* Close editor */
 
-                <span>Programming 💻</span>
+        progressEditor.style.display =
+            "none";
 
-                <span id="programming-percent">
-                    10%
-                </span>
 
-            </div>
+    }
+);
 
-            <div class="progress-bar">
 
-                <div
-                    id="programming-bar"
-                    class="progress-fill"
-                ></div>
+/* =================================
+   NAVIGATION MENU
+================================= */
 
-            </div>
+const menuButton =
+    document.getElementById(
+        "menu-button"
+    );
 
-        </div>
 
+const navLinks =
+    document.getElementById(
+        "nav-links"
+    );
 
-        <div class="progress-item">
 
-            <div class="progress-label">
+menuButton.addEventListener(
+    "click",
+    function () {
 
-                <span>Korean 🇰🇷</span>
+        navLinks.classList.toggle(
+            "open"
+        );
 
-                <span id="korean-percent">
-                    15%
-                </span>
+    }
+);
 
-            </div>
 
-            <div class="progress-bar">
+/* =================================
+   CLOSE MOBILE MENU AFTER CLICK
+================================= */
 
-                <div
-                    id="korean-bar"
-                    class="progress-fill"
-                ></div>
+const navigationLinks =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
 
-            </div>
 
-        </div>
+navigationLinks.forEach(
+    function (link) {
 
+        link.addEventListener(
+            "click",
+            function () {
 
-        <div class="progress-item">
+                navLinks.classList.remove(
+                    "open"
+                );
 
-            <div class="progress-label">
+            }
+        );
 
-                <span>Architecture 🏛️</span>
+    }
+);
 
-                <span id="architecture-percent">
-                    5%
-                </span>
 
-            </div>
+/* =================================
+   DARK MODE
+================================= */
 
-            <div class="progress-bar">
+const themeButton =
+    document.getElementById(
+        "theme-button"
+    );
 
-                <div
-                    id="architecture-bar"
-                    class="progress-fill"
-                ></div>
 
-            </div>
+const savedTheme =
+    localStorage.getItem(
+        "yvetteTheme"
+    );
 
-        </div>
 
+if (savedTheme === "dark") {
 
-        <div class="progress-item">
+    document.body.classList.add(
+        "dark"
+    );
 
-            <div class="progress-label">
+    themeButton.textContent = "☀️";
 
-                <span>Portfolio 🎨</span>
+}
 
-                <span id="portfolio-percent">
-                    20%
-                </span>
 
-            </div>
+themeButton.addEventListener(
+    "click",
+    function () {
 
-            <div class="progress-bar">
+        document.body.classList.toggle(
+            "dark"
+        );
 
-                <div
-                    id="portfolio-bar"
-                    class="progress-fill"
-                ></div>
 
-            </div>
+        if (
+            document.body.classList.contains(
+                "dark"
+            )
+        ) {
 
-        </div>
+            themeButton.textContent =
+                "☀️";
 
-    </div>
+            localStorage.setItem(
+                "yvetteTheme",
+                "dark"
+            );
 
-</section>
+        } else {
 
+            themeButton.textContent =
+                "🌙";
 
-<!-- ================================
-     PROJECTS
-================================ -->
+            localStorage.setItem(
+                "yvetteTheme",
+                "light"
+            );
 
-<section id="projects" class="section">
+        }
 
-    <div class="section-heading">
+    }
+);
 
-        <p class="section-label">03 • PROJECTS</p>
 
-        <h2>
-            Things I am
-            <span>building.</span>
-        </h2>
+/* =================================
+   INITIALIZE
+================================= */
 
-    </div>
+updateProgressDisplay();
 
-
-    <div class="project-grid">
-
-
-        <article class="project-card">
-
-            <div class="project-number">
-                01
-            </div>
-
-            <div class="project-icon">
-                💻
-            </div>
-
-            <h3>Programming Projects</h3>
-
-            <p>
-                Python programs, algorithms,
-                data structures and practical
-                problem-solving projects.
-            </p>
-
-            <span class="project-status">
-                IN PROGRESS
-            </span>
-
-        </article>
-
-
-        <article class="project-card">
-
-            <div class="project-number">
-                02
-            </div>
-
-            <div class="project-icon">
-                🌐
-            </div>
-
-            <h3>Interactive Website</h3>
-
-            <p>
-                A personal portfolio and GKS
-                journey tracker designed and
-                developed from scratch.
-            </p>
-
-            <span class="project-status">
-                ACTIVE
-            </span>
-
-        </article>
-
-
-        <article class="project-card">
-
-            <div class="project-number">
-                03
-            </div>
-
-            <div class="project-icon">
-                🏛️
-            </div>
-
-            <h3>Architecture Portfolio</h3>
-
-            <p>
-                Floor plans, technical drawings,
-                sustainable designs and
-                architectural concepts.
-            </p>
-
-            <span class="project-status">
-                PLANNED
-            </span>
-
-        </article>
-
-
-        <article class="project-card">
-
-            <div class="project-number">
-                04
-            </div>
-
-            <div class="project-icon">
-                🎨
-            </div>
-
-            <h3>Graphic Design</h3>
-
-            <p>
-                Posters, visual identities,
-                infographics, interfaces and
-                presentation boards.
-            </p>
-
-            <span class="project-status">
-                PLANNED
-            </span>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     KOREAN
-================================ -->
-
-<section id="korean" class="section
+console.log(
+    "Yvette's GKS Portfolio loaded successfully 🚀"
+);
